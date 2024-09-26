@@ -1,0 +1,1156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<title>Econographics of Knoxville, Inc.</title>
+<meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1.0'>
+
+<style>
+
+p.normal {font-weight:normal;}
+p.light {font-weight:lighter;}
+p.thick {font-weight:bold;}
+p.thicker {font-weight:900;}
+
+h1 {
+color: black;
+text-align: center;
+font-family: arial;
+font-size: 15px;
+}
+
+#Current {
+position: absolute;
+//border: 1px solid red;
+top: 120px;
+left: 12%;
+width: 300px;
+height: 30px;
+text-align: center;
+font-family: arial;
+font-size: 12px;
+font-weight: bold;
+}
+
+#Previous {
+position: absolute;
+//border: 1px solid red;
+top: 120px;
+left: 66%;
+width: 300px;
+height: 30px;
+text-align: center;
+font-family: arial;
+font-size: 12px;
+font-weight: bold;
+color: LightSlateGray;
+}
+
+#TitleCurrent {
+position: absolute;
+//border: 1px solid red;
+top: 100px;
+left: 12%;
+width: 300px;
+height: 20px;
+text-align: center;
+font-family: arial;
+font-size: 14px;
+font-weight: bold;
+text-decoration: underline;
+}
+
+#TitlePrevious {
+position: absolute;
+//border: 1px solid red;
+top: 100px;
+left: 66%;
+width: 300px;
+height: 20px;
+text-align: center;
+font-family: arial;
+font-size: 14px;
+font-weight: bold;
+text-decoration: underline;
+color: LightSlateGray;
+}
+
+.Txt1
+{
+position:absolute;
+top:40px;
+width:auto;
+overflow:scroll
+background-color:#b0e0e6;
+}
+
+img
+{
+position:absolute;
+left: 93%;
+top:80px;
+}
+
+.cssHeaderRow {
+background-color: #2A94D6;
+}
+
+.cssTableRow {
+background-color: #F0F1F2;
+}
+
+.cssOddTableRow {
+background-color: #F0F1F2;
+}
+
+.cssSelectedTableRow {
+font-size: 20px;
+font-weight:bold;
+}
+
+.cssHoverTableRow {
+background: #ccc;
+}
+
+.cssHeaderCell {
+//color: #FFFFFF;
+font-weight: Normal;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+padding: 10px !important;
+//border: solid 1px #FFFFFF;
+}
+
+.cssTableCell {
+font-size: 16px;
+padding: 10px !important;
+border: solid 1px #FFFFFF;
+//white-space: nowrap !important;
+//overflow: hidden !important;
+//text-overflow: ellipsis !important;
+}
+
+.cssRowNumberCell {
+text-align: center;
+}
+
+.left-text {
+text-align: left;
+}
+
+.small-font {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+height: 14px;
+text-align: right;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+color: Black;
+//display: -webkit-box;
+//-webkit-line-clamp: 1;
+//-webkit-box-orient: vertical;
+}
+
+.small-fontprev {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+height: 14px;
+text-align: right;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+color: LightSlateGray;
+//display: -webkit-box;
+//-webkit-line-clamp: 1;
+//-webkit-box-orient: vertical;
+}
+
+.left-text {
+text-align: left !important;
+width: 200px
+//white-space: normal;
+//overflow: hidden;
+//text-overflow: ellipsis;
+}
+
+.Col7-text {
+width: 10px
+}
+
+.Col8-text {
+width: 10px
+}
+
+.Col1-text {
+width: 100px
+}
+
+.Col2-text {
+width: 30px
+}
+
+.Col3-text {
+width: 45px
+}
+
+.Col4-text {
+width: 40px
+}
+
+.Col5-text {
+width: 40px
+}
+
+.Col6-text {
+width: 40px
+}
+
+.Col0-text {
+width: 100px
+}
+
+.currencyfilter .google-visualization-controls-rangefilter-thumblabel:before {
+color: Blue;
+content: '$';
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+height: 14px;
+}
+
+.csv-button {
+position: absolute;
+top: 770px;
+left: 42%;
+height: 20px;
+text-align: center;
+font-family: arial;
+font-size: 10px;
+font-weight: normal;
+}
+
+.csvprev-button {
+position: absolute;
+top: 770px;
+left: 92%;
+height: 20px;
+text-align: center;
+font-family: arial;
+font-size: 10px;
+font-weight: normal;
+}
+
+.vl {
+border-left: 1px solid black;
+height: 750px;
+position: absolute;
+left: 50%;
+margin-left: -3px;
+top: 100px;
+}
+
+.DescFont {
+font-family: Arial,sans-serif;
+font-size: 8.0pt;
+font-weight: Normal;
+color: Black;
+}
+
+.DescVal {
+font-family: Arial,sans-serif;
+font-size: 9.0pt;
+font-weight: Normal;
+color: Black;
+column-width: 100px;
+}
+
+.DescFontPrev {
+font-family: Arial,sans-serif;
+font-size: 8.0pt;
+font-weight: Normal;
+color: LightSlateGray;
+}
+
+.DescValPrev {
+font-family: Arial,sans-serif;
+font-size: 9.0pt;
+font-weight: Normal;
+color: LightSlateGray;
+column-width: 100px;
+}
+
+.tableStyle {
+position: absolute;
+top: 160px;
+left: 32%;
+width: 200px;
+height: 340px;
+//border: 1px solid lightgrey;
+overflow: hidden; white-space: nowrap;
+}
+
+.tableStylePrev {
+position: absolute;
+top: 160px;
+left: 82%;
+width: 200px;
+height: 340px;
+//border: 1px solid black;
+overflow: hidden; white-space: nowrap;
+}
+
+/* The container */
+.container {
+  font-family: Arial,sans-serif;
+  font-size: 8.0pt;
+  font-weight: Normal;
+  //font-weight: Bold;
+  color: Black;
+  position: absolute;
+  top: 105px;
+  left: 55.5%;
+  //width: 50%;
+  //height: 200px;
+}
+
+</style>
+
+</head>
+
+<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+<script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script type='text/javascript' src='https://www.google.com/jsapi?fake=.js'></script>
+
+<div>
+<button id='csvcurrent' class='csv-button'>Download CSV</button>
+</div>
+
+<div>
+<button id='csvprevious' class='csvprev-button'>Download CSV</button>
+</div>
+
+<div class='vl'></div>
+<script type='text/javascript'>
+
+// Load the Visualization API and the controls package.
+google.charts.load('current', {'packages':['corechart', 'controls']});
+
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawDashboard);
+
+// Callback that creates and populates a data table,
+// instantiates a dashboard, a range slider and a pie chart,
+// passes in the data and draws it.
+function drawDashboard() {
+
+data = google.visualization.arrayToDataTable([
+['Benefit Code', 'Total Pd', '% Tot', 'Plan Pd', 'CoPays', 'CoIns', 'Deduct', 'Plan%', 'Mem%'],
+['BC21 INPATIENT HOSPI...', {v: 771052, f: '$771,052'}, {v: 0.2908, f: '29.08%'}, {v: 771052, f: '$771,052'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC52 ACUTE DRUG CARD...', {v: 259738, f: '$259,738'}, {v: 0.0980, f: '9.80%'}, {v: 259738, f: '$259,738'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC22 OUTPATIENT HOSP...', {v: 247340, f: '$247,340'}, {v: 0.0933, f: '9.33%'}, {v: 246890, f: '$246,890'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 451, f: '$451'}, {v: 0.9982, f: '99.82%'}, {v: 0.0018, f: '0.18%'}], 
+['BC6 HOSPITAL BILLED ...', {v: 231158, f: '$231,158'}, {v: 0.0872, f: '8.72%'}, {v: 213160, f: '$213,160'}, {v: 0, f: '$0'}, {v: 333, f: '$333'}, {v: 17665, f: '$17,665'}, {v: 0.9221, f: '92.21%'}, {v: 0.0779, f: '7.79%'}], 
+['BC55 MAIL ORDER RX B...', {v: 109729, f: '$109,729'}, {v: 0.0414, f: '4.14%'}, {v: 109729, f: '$109,729'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC14 SURGERY PHYSICI...', {v: 94060, f: '$94,060'}, {v: 0.0355, f: '3.55%'}, {v: 93854, f: '$93,854'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 206, f: '$206'}, {v: 0.9978, f: '99.78%'}, {v: 0.0022, f: '0.22%'}], 
+['BC37 OFFICE VISIT', {v: 89367, f: '$89,367'}, {v: 0.0337, f: '3.37%'}, {v: 51777, f: '$51,777'}, {v: 19456, f: '$19,456'}, {v: 359, f: '$359'}, {v: 17776, f: '$17,776'}, {v: 0.5794, f: '57.94%'}, {v: 0.4206, f: '42.06%'}], 
+['BC15 OUTPATIENT SURG...', {v: 84506, f: '$84,506'}, {v: 0.0319, f: '3.19%'}, {v: 84118, f: '$84,118'}, {v: 0, f: '$0'}, {v: 279, f: '$279'}, {v: 109, f: '$109'}, {v: 0.9954, f: '99.54%'}, {v: 0.0046, f: '0.46%'}], 
+['BC25 HOSPITAL EMERGE...', {v: 82671, f: '$82,671'}, {v: 0.0312, f: '3.12%'}, {v: 78169, f: '$78,169'}, {v: 3567, f: '$3,567'}, {v: 0, f: '$0'}, {v: 935, f: '$935'}, {v: 0.9455, f: '94.55%'}, {v: 0.0545, f: '5.45%'}], 
+['BC5 XRAY/LAB', {v: 72504, f: '$72,504'}, {v: 0.0273, f: '2.73%'}, {v: 67627, f: '$67,627'}, {v: 0, f: '$0'}, {v: 403, f: '$403'}, {v: 4474, f: '$4,474'}, {v: 0.9327, f: '93.27%'}, {v: 0.0673, f: '6.73%'}], 
+['BC43 SP- OFFICE VISI...', {v: 62803, f: '$62,803'}, {v: 0.0237, f: '2.37%'}, {v: 44422, f: '$44,422'}, {v: 8959, f: '$8,959'}, {v: 381, f: '$381'}, {v: 9040, f: '$9,040'}, {v: 0.7073, f: '70.73%'}, {v: 0.2927, f: '29.27%'}], 
+['BC23 SURGERY CENTER ...', {v: 48502, f: '$48,502'}, {v: 0.0183, f: '1.83%'}, {v: 45947, f: '$45,947'}, {v: 0, f: '$0'}, {v: 2555, f: '$2,555'}, {v: 0, f: '$0'}, {v: 0.9473, f: '94.73%'}, {v: 0.0527, f: '5.27%'}], 
+['BC19 ANESTHESIA CHAR...', {v: 38739, f: '$38,739'}, {v: 0.0146, f: '1.46%'}, {v: 38518, f: '$38,518'}, {v: 0, f: '$0'}, {v: 82, f: '$82'}, {v: 140, f: '$140'}, {v: 0.9943, f: '99.43%'}, {v: 0.0057, f: '0.57%'}], 
+['BC10 PHYSICAL THERAP...', {v: 34392, f: '$34,392'}, {v: 0.0130, f: '1.30%'}, {v: 33956, f: '$33,956'}, {v: 0, f: '$0'}, {v: 46, f: '$46'}, {v: 390, f: '$390'}, {v: 0.9873, f: '98.73%'}, {v: 0.0127, f: '1.27%'}], 
+['BC40 INJECTION', {v: 30638, f: '$30,638'}, {v: 0.0116, f: '1.16%'}, {v: 29475, f: '$29,475'}, {v: 0, f: '$0'}, {v: 13, f: '$13'}, {v: 1150, f: '$1,150'}, {v: 0.9620, f: '96.20%'}, {v: 0.0380, f: '3.80%'}], 
+['BC20 OUTPATIENT ANES...', {v: 29375, f: '$29,375'}, {v: 0.0111, f: '1.11%'}, {v: 29191, f: '$29,191'}, {v: 0, f: '$0'}, {v: 184, f: '$184'}, {v: 0, f: '$0'}, {v: 0.9937, f: '99.37%'}, {v: 0.0063, f: '0.63%'}], 
+['BC42 IN-HOSPITAL DOC...', {v: 28450, f: '$28,450'}, {v: 0.0107, f: '1.07%'}, {v: 27810, f: '$27,810'}, {v: 0, f: '$0'}, {v: 86, f: '$86'}, {v: 554, f: '$554'}, {v: 0.9775, f: '97.75%'}, {v: 0.0225, f: '2.25%'}], 
+['BC50 AMBULANCE', {v: 27497, f: '$27,497'}, {v: 0.0104, f: '1.04%'}, {v: 27497, f: '$27,497'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC56 PATHOLOGY', {v: 23548, f: '$23,548'}, {v: 0.0089, f: '0.89%'}, {v: 22156, f: '$22,156'}, {v: 0, f: '$0'}, {v: 193, f: '$193'}, {v: 1199, f: '$1,199'}, {v: 0.9409, f: '94.09%'}, {v: 0.0591, f: '5.91%'}], 
+['BC45 MATERNITY INPAT...', {v: 22855, f: '$22,855'}, {v: 0.0086, f: '0.86%'}, {v: 22855, f: '$22,855'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC16 OFFICE SURGERY ...', {v: 21682, f: '$21,682'}, {v: 0.0082, f: '0.82%'}, {v: 19395, f: '$19,395'}, {v: 970, f: '$970'}, {v: 0, f: '$0'}, {v: 1317, f: '$1,317'}, {v: 0.8945, f: '89.45%'}, {v: 0.1055, f: '10.55%'}], 
+['BC64 ROUTINE PHYSICA...', {v: 20641, f: '$20,641'}, {v: 0.0078, f: '0.78%'}, {v: 15514, f: '$15,514'}, {v: 2205, f: '$2,205'}, {v: 23, f: '$23'}, {v: 2899, f: '$2,899'}, {v: 0.7516, f: '75.16%'}, {v: 0.2484, f: '24.84%'}], 
+['BC31 PHYSICAL THERAP...', {v: 19704, f: '$19,704'}, {v: 0.0074, f: '0.74%'}, {v: 13797, f: '$13,797'}, {v: 5793, f: '$5,793'}, {v: 72, f: '$72'}, {v: 42, f: '$42'}, {v: 0.7002, f: '70.02%'}, {v: 0.2998, f: '29.98%'}], 
+['BC33 MANIPULATIVE TH...', {v: 18247, f: '$18,247'}, {v: 0.0069, f: '0.69%'}, {v: 16068, f: '$16,068'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 2178, f: '$2,178'}, {v: 0.8806, f: '88.06%'}, {v: 0.1194, f: '11.94%'}], 
+['BC48 OUTPATIENT SERV...', {v: 15183, f: '$15,183'}, {v: 0.0057, f: '0.57%'}, {v: 6309, f: '$6,309'}, {v: 0, f: '$0'}, {v: 7121, f: '$7,121'}, {v: 1754, f: '$1,754'}, {v: 0.4155, f: '41.55%'}, {v: 0.5845, f: '58.45%'}], 
+['BC13 DURABLE MEDICAL...', {v: 12474, f: '$12,474'}, {v: 0.0047, f: '0.47%'}, {v: 11992, f: '$11,992'}, {v: 0, f: '$0'}, {v: 244, f: '$244'}, {v: 239, f: '$239'}, {v: 0.9613, f: '96.13%'}, {v: 0.0387, f: '3.87%'}], 
+['BC46 MATERNITY - XRA...', {v: 12333, f: '$12,333'}, {v: 0.0047, f: '0.47%'}, {v: 11056, f: '$11,056'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1277, f: '$1,277'}, {v: 0.8964, f: '89.64%'}, {v: 0.1036, f: '10.36%'}], 
+['BC35 CHEMOTHERAPY', {v: 11829, f: '$11,829'}, {v: 0.0045, f: '0.45%'}, {v: 11829, f: '$11,829'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC65 EARLY DETECTION', {v: 11065, f: '$11,065'}, {v: 0.0042, f: '0.42%'}, {v: 6705, f: '$6,705'}, {v: 1395, f: '$1,395'}, {v: 0, f: '$0'}, {v: 2965, f: '$2,965'}, {v: 0.6060, f: '60.60%'}, {v: 0.3940, f: '39.40%'}], 
+['BC60 ROUTINE SCREENI...', {v: 10700, f: '$10,700'}, {v: 0.0040, f: '0.40%'}, {v: 8562, f: '$8,562'}, {v: 899, f: '$899'}, {v: 18, f: '$18'}, {v: 1221, f: '$1,221'}, {v: 0.8002, f: '80.02%'}, {v: 0.1998, f: '19.98%'}], 
+['BC7 INPATIENT XRAY/L...', {v: 10509, f: '$10,509'}, {v: 0.0040, f: '0.40%'}, {v: 9700, f: '$9,700'}, {v: 0, f: '$0'}, {v: 270, f: '$270'}, {v: 539, f: '$539'}, {v: 0.9230, f: '92.30%'}, {v: 0.0770, f: '7.70%'}], 
+['BC28 PRE-ADMISSION T...', {v: 8632, f: '$8,632'}, {v: 0.0033, f: '0.33%'}, {v: 8361, f: '$8,361'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 271, f: '$271'}, {v: 0.9686, f: '96.86%'}, {v: 0.0314, f: '3.14%'}], 
+['BC30 TREATMENT/OBSER...', {v: 7794, f: '$7,794'}, {v: 0.0029, f: '0.29%'}, {v: 7794, f: '$7,794'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC44 MATERNITY - DOC...', {v: 7777, f: '$7,777'}, {v: 0.0029, f: '0.29%'}, {v: 7900, f: '$7,900'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: -123, f: '-$123'}, {v: 0.0000, f: '-'}, {v: 0.0000, f: '-'}], 
+['BC63 WELL CHILD VISI...', {v: 7416, f: '$7,416'}, {v: 0.0028, f: '0.28%'}, {v: 4667, f: '$4,667'}, {v: 1080, f: '$1,080'}, {v: 0, f: '$0'}, {v: 1669, f: '$1,669'}, {v: 0.6293, f: '62.93%'}, {v: 0.3707, f: '37.07%'}], 
+['BC53 VENDOR DISCOUNT...', {v: 7098, f: '$7,098'}, {v: 0.0027, f: '0.27%'}, {v: 7098, f: '$7,098'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC62 CHILD IMMUNIZAT...', {v: 6734, f: '$6,734'}, {v: 0.0025, f: '0.25%'}, {v: 6734, f: '$6,734'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC68 EMERGENCY CARE-...', {v: 6682, f: '$6,682'}, {v: 0.0025, f: '0.25%'}, {v: 6682, f: '$6,682'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC66 EARLY DETECTION...', {v: 6594, f: '$6,594'}, {v: 0.0025, f: '0.25%'}, {v: 4756, f: '$4,756'}, {v: 0, f: '$0'}, {v: 19, f: '$19'}, {v: 1820, f: '$1,820'}, {v: 0.7212, f: '72.12%'}, {v: 0.2788, f: '27.88%'}], 
+['BC27 OUT PATIENT ORA...', {v: 5724, f: '$5,724'}, {v: 0.0022, f: '0.22%'}, {v: 5387, f: '$5,387'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 337, f: '$337'}, {v: 0.9411, f: '94.11%'}, {v: 0.0589, f: '5.89%'}], 
+['BC29 HOSPITAL PHYSIC...', {v: 5233, f: '$5,233'}, {v: 0.0020, f: '0.20%'}, {v: 5233, f: '$5,233'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC1 MEDICAL SUPPLIES', {v: 4179, f: '$4,179'}, {v: 0.0016, f: '0.16%'}, {v: 3907, f: '$3,907'}, {v: 0, f: '$0'}, {v: 272, f: '$272'}, {v: 0, f: '$0'}, {v: 0.9350, f: '93.50%'}, {v: 0.0650, f: '6.50%'}], 
+['BC9 MODALITY', {v: 4172, f: '$4,172'}, {v: 0.0016, f: '0.16%'}, {v: 3816, f: '$3,816'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 356, f: '$356'}, {v: 0.9146, f: '91.46%'}, {v: 0.0854, f: '8.54%'}], 
+['BC2 HOSPICE CARE', {v: 4018, f: '$4,018'}, {v: 0.0015, f: '0.15%'}, {v: 4018, f: '$4,018'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC17 ASSISTANT SURGE...', {v: 2841, f: '$2,841'}, {v: 0.0011, f: '0.11%'}, {v: 2841, f: '$2,841'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC24 CARDIAC REHABIL...', {v: 2800, f: '$2,800'}, {v: 0.0011, f: '0.11%'}, {v: 2800, f: '$2,800'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC54 HOME HEALTH CAR...', {v: 2300, f: '$2,300'}, {v: 0.0009, f: '0.09%'}, {v: 2270, f: '$2,270'}, {v: 0, f: '$0'}, {v: 30, f: '$30'}, {v: 0, f: '$0'}, {v: 0.9870, f: '98.70%'}, {v: 0.0130, f: '1.30%'}], 
+['BC8 INFUSION THERAPY', {v: 2059, f: '$2,059'}, {v: 0.0008, f: '0.08%'}, {v: 2059, f: '$2,059'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC18 OFFICE TREATMEN...', {v: 1587, f: '$1,587'}, {v: 0.0006, f: '0.06%'}, {v: 1540, f: '$1,540'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 47, f: '$47'}, {v: 0.9704, f: '97.04%'}, {v: 0.0296, f: '2.96%'}], 
+['BC11 SMS AUDIT FEE', {v: 1495, f: '$1,495'}, {v: 0.0006, f: '0.06%'}, {v: 1495, f: '$1,495'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC3 SKILLED NURSING ...', {v: 1207, f: '$1,207'}, {v: 0.0005, f: '0.05%'}, {v: 1207, f: '$1,207'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC32 OCCUPATIONAL TH...', {v: 843, f: '$843'}, {v: 0.0003, f: '0.03%'}, {v: 843, f: '$843'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC36 RADIATION THERA...', {v: 605, f: '$605'}, {v: 0.0002, f: '0.02%'}, {v: 605, f: '$605'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC58 CASE MANAGEMENT', {v: 295, f: '$295'}, {v: 0.0001, f: '0.01%'}, {v: 295, f: '$295'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC12 EMERGENCY MEDIC...', {v: 134, f: '$134'}, {v: 0.0001, f: '0.01%'}, {v: 34, f: '$34'}, {v: 100, f: '$100'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.2554, f: '25.54%'}, {v: 0.7446, f: '74.46%'}], 
+['BC41 IMMUNIZATION', {v: 100, f: '$100'}, {v: 0.0000, f: '0.00%'}, {v: 100, f: '$100'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC39 OFFICE MEDICATI...', {v: 30, f: '$30'}, {v: 0.0000, f: '0.00%'}, {v: 30, f: '$30'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC26 CLINIC VISIT', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC34 SPEECH THERAPY', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC38 CONSULTATION', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC47 INPATIENT SERVI...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC49 PRESCRIPTION DR...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC57 HOSPITAL PATHOL...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC59 EDUCATION/TRAIN...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC61 OTHER OBGYN DIA...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC67 TMJ BENEFIT', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC69 HOME HEALTHCARE...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC4 ACUPUNCTURE', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC51 GANSE APOTHECAR...', {v: -355, f: '-$355'}, {v: -0.0001, f: '-0.01%'}, {v: -355, f: '-$355'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+]);
+
+// Create a dashboard.
+//var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+
+var dashboard = new google.visualization.Dashboard(document.querySelector('#dashboard'));
+
+var stringFilter = new google.visualization.ControlWrapper({
+controlType: 'StringFilter',
+containerId: 'string_filter_div',
+options: {
+filterColumnIndex: 0
+}
+});
+
+// Create a range slider, passing some options
+var PaidRangeSlider = new google.visualization.ControlWrapper({
+'controlType': 'NumberRangeFilter',
+'containerId': 'filter_div',
+'options': {
+'allowHtml': true,
+'filterColumnLabel': 'Plan Pd',
+'ui': { 'cssClass': 'currencyfilter' }
+ }
+});
+
+// Create a Table chart, passing some options
+var Table = new google.visualization.ChartWrapper({
+'chartType': 'Table',
+'containerId': 'chart_div',
+'options': {
+'width': 660,
+'height': 325,
+cssClassNames: {
+//headerCell: 'cssHeaderCell',
+tableCell: 'small-font',
+  }
+ }
+});
+
+data.setColumnProperty(0, 'className', 'left-text');
+data.setColumnProperty(7, 'className', 'Col7-text');
+data.setColumnProperty(8, 'className', 'Col8-text');
+//data.setColumnProperty(2, 'className', 'Col2-text');
+//data.setColumnProperty(1, 'className', 'Col1-text');
+//data.setColumnProperty(3, 'className', 'Col3-text');
+//data.setColumnProperty(4, 'className', 'Col4-text');
+//data.setColumnProperty(5, 'className', 'Col5-text');
+//data.setColumnProperty(6, 'className', 'Col6-text');
+
+// Establish dependencies, declaring that 'filter' drives 'Table',
+// so that the table will only display entries that are let through
+// given the chosen slider range.
+dashboard.bind([stringFilter, PaidRangeSlider], [Table]);
+
+//var csv = google.visualization.dataTableToCsv(data);
+//console.log(csv);
+
+// Draw the dashboard.
+dashboard.draw(data);
+}
+
+$('.csv-button').on('click', function () {
+var browserIsIE;
+var csvColumns;
+var csvContent;
+var downloadLink;
+var fileName;
+
+// build column headings
+csvColumns = '';
+for (var i = 0; i < data.getNumberOfColumns(); i++) {
+csvColumns += data.getColumnLabel(i);
+if (i < (data.getNumberOfColumns() - 1)) {
+csvColumns += ',';
+ }
+}
+csvColumns += '\n';
+
+// build data rows
+csvContent = csvColumns + google.visualization.dataTableToCsv(data);
+
+// download file
+browserIsIE = false || !!document.documentMode;
+fileName = 'data.csv';
+if (browserIsIE) {
+window.navigator.msSaveBlob(new Blob([csvContent], {type: 'data:text/csv'}), fileName);
+} else {
+downloadLink = document.createElement('a');
+downloadLink.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvContent);
+downloadLink.download = fileName;
+raiseEvent(downloadLink, 'click');
+downloadLink = null;
+ }
+});
+
+function raiseEvent(element, eventType) {
+var eventRaised;
+if (document.createEvent) {
+eventRaised = document.createEvent('MouseEvents');
+eventRaised.initEvent(eventType, true, false);
+element.dispatchEvent(eventRaised);
+} else if (document.createEventObject) {
+eventRaised = document.createEventObject();
+element.fireEvent('on' + eventType, eventRaised);
+ }
+}
+
+</script>
+
+
+<script type='text/javascript'>
+
+// Load the Visualization API and the controls package.
+google.charts.load('current', {'packages':['corechart', 'controls']});
+
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawDashboardPrev);
+
+// Callback that creates and populates a data table,
+// instantiates a dashboard, a range slider and a pie chart,
+// passes in the data and draws it.
+function drawDashboardPrev() {
+
+dataprev = google.visualization.arrayToDataTable([
+['Benefit Code', 'Total Pd', '% Tot', 'Plan Pd', 'CoPays', 'CoIns', 'Deduct', 'Plan%', 'Mem%'],
+['BC21 INPATIENT HOSPI...', {v: 561481, f: '$561,481'}, {v: 0.2424, f: '24.24%'}, {v: 561358, f: '$561,358'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 123, f: '$123'}, {v: 0.9998, f: '99.98%'}, {v: 0.0002, f: '0.02%'}], 
+['BC22 OUTPATIENT HOSP...', {v: 259526, f: '$259,526'}, {v: 0.1121, f: '11.21%'}, {v: 259369, f: '$259,369'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 158, f: '$158'}, {v: 0.9994, f: '99.94%'}, {v: 0.0006, f: '0.06%'}], 
+['BC6 HOSPITAL BILLED ...', {v: 251166, f: '$251,166'}, {v: 0.1084, f: '10.84%'}, {v: 235229, f: '$235,229'}, {v: 0, f: '$0'}, {v: 126, f: '$126'}, {v: 15811, f: '$15,811'}, {v: 0.9365, f: '93.65%'}, {v: 0.0635, f: '6.35%'}], 
+['BC52 ACUTE DRUG CARD...', {v: 192691, f: '$192,691'}, {v: 0.0832, f: '8.32%'}, {v: 192691, f: '$192,691'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC51 GANSE APOTHECAR...', {v: 126871, f: '$126,871'}, {v: 0.0548, f: '5.48%'}, {v: 126871, f: '$126,871'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC5 XRAY/LAB', {v: 102359, f: '$102,359'}, {v: 0.0442, f: '4.42%'}, {v: 96145, f: '$96,145'}, {v: 0, f: '$0'}, {v: 641, f: '$641'}, {v: 5574, f: '$5,574'}, {v: 0.9393, f: '93.93%'}, {v: 0.0607, f: '6.07%'}], 
+['BC37 OFFICE VISIT', {v: 90072, f: '$90,072'}, {v: 0.0389, f: '3.89%'}, {v: 51935, f: '$51,935'}, {v: 15405, f: '$15,405'}, {v: 733, f: '$733'}, {v: 22000, f: '$22,000'}, {v: 0.5766, f: '57.66%'}, {v: 0.4234, f: '42.34%'}], 
+['BC15 OUTPATIENT SURG...', {v: 64305, f: '$64,305'}, {v: 0.0278, f: '2.78%'}, {v: 62534, f: '$62,534'}, {v: 0, f: '$0'}, {v: 1431, f: '$1,431'}, {v: 341, f: '$341'}, {v: 0.9725, f: '97.25%'}, {v: 0.0275, f: '2.75%'}], 
+['BC43 SP- OFFICE VISI...', {v: 58117, f: '$58,117'}, {v: 0.0251, f: '2.51%'}, {v: 44534, f: '$44,534'}, {v: 6274, f: '$6,274'}, {v: 232, f: '$232'}, {v: 7078, f: '$7,078'}, {v: 0.7663, f: '76.63%'}, {v: 0.2337, f: '23.37%'}], 
+['BC25 HOSPITAL EMERGE...', {v: 54409, f: '$54,409'}, {v: 0.0235, f: '2.35%'}, {v: 49885, f: '$49,885'}, {v: 2122, f: '$2,122'}, {v: 0, f: '$0'}, {v: 2402, f: '$2,402'}, {v: 0.9169, f: '91.69%'}, {v: 0.0831, f: '8.31%'}], 
+['BC36 RADIATION THERA...', {v: 45120, f: '$45,120'}, {v: 0.0195, f: '1.95%'}, {v: 45120, f: '$45,120'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC14 SURGERY PHYSICI...', {v: 38795, f: '$38,795'}, {v: 0.0167, f: '1.67%'}, {v: 38395, f: '$38,395'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 400, f: '$400'}, {v: 0.9897, f: '98.97%'}, {v: 0.0103, f: '1.03%'}], 
+['BC20 OUTPATIENT ANES...', {v: 29388, f: '$29,388'}, {v: 0.0127, f: '1.27%'}, {v: 27810, f: '$27,810'}, {v: 0, f: '$0'}, {v: 1455, f: '$1,455'}, {v: 123, f: '$123'}, {v: 0.9463, f: '94.63%'}, {v: 0.0537, f: '5.37%'}], 
+['BC31 PHYSICAL THERAP...', {v: 28776, f: '$28,776'}, {v: 0.0124, f: '1.24%'}, {v: 24290, f: '$24,290'}, {v: 3813, f: '$3,813'}, {v: 0, f: '$0'}, {v: 674, f: '$674'}, {v: 0.8441, f: '84.41%'}, {v: 0.1559, f: '15.59%'}], 
+['BC55 MAIL ORDER RX B...', {v: 26550, f: '$26,550'}, {v: 0.0115, f: '1.15%'}, {v: 26550, f: '$26,550'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC10 PHYSICAL THERAP...', {v: 24409, f: '$24,409'}, {v: 0.0105, f: '1.05%'}, {v: 23868, f: '$23,868'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 541, f: '$541'}, {v: 0.9778, f: '97.78%'}, {v: 0.0222, f: '2.22%'}], 
+['BC48 OUTPATIENT SERV...', {v: 21618, f: '$21,618'}, {v: 0.0093, f: '0.93%'}, {v: 8091, f: '$8,091'}, {v: 0, f: '$0'}, {v: 9999, f: '$9,999'}, {v: 3529, f: '$3,529'}, {v: 0.3743, f: '37.43%'}, {v: 0.6257, f: '62.57%'}], 
+['BC12 EMERGENCY MEDIC...', {v: 20904, f: '$20,904'}, {v: 0.0090, f: '0.90%'}, {v: 19614, f: '$19,614'}, {v: 1053, f: '$1,053'}, {v: 79, f: '$79'}, {v: 158, f: '$158'}, {v: 0.9383, f: '93.83%'}, {v: 0.0617, f: '6.17%'}], 
+['BC64 ROUTINE PHYSICA...', {v: 19328, f: '$19,328'}, {v: 0.0083, f: '0.83%'}, {v: 12921, f: '$12,921'}, {v: 1934, f: '$1,934'}, {v: 20, f: '$20'}, {v: 4453, f: '$4,453'}, {v: 0.6685, f: '66.85%'}, {v: 0.3315, f: '33.15%'}], 
+['BC40 INJECTION', {v: 19299, f: '$19,299'}, {v: 0.0083, f: '0.83%'}, {v: 18132, f: '$18,132'}, {v: 7, f: '$7'}, {v: 0, f: '$0'}, {v: 1160, f: '$1,160'}, {v: 0.9395, f: '93.95%'}, {v: 0.0605, f: '6.05%'}], 
+['BC19 ANESTHESIA CHAR...', {v: 18639, f: '$18,639'}, {v: 0.0080, f: '0.80%'}, {v: 18107, f: '$18,107'}, {v: 0, f: '$0'}, {v: 532, f: '$532'}, {v: 0, f: '$0'}, {v: 0.9715, f: '97.15%'}, {v: 0.0285, f: '2.85%'}], 
+['BC33 MANIPULATIVE TH...', {v: 18263, f: '$18,263'}, {v: 0.0079, f: '0.79%'}, {v: 14384, f: '$14,384'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 3880, f: '$3,880'}, {v: 0.7876, f: '78.76%'}, {v: 0.2124, f: '21.24%'}], 
+['BC16 OFFICE SURGERY ...', {v: 17545, f: '$17,545'}, {v: 0.0076, f: '0.76%'}, {v: 14977, f: '$14,977'}, {v: 1090, f: '$1,090'}, {v: 0, f: '$0'}, {v: 1478, f: '$1,478'}, {v: 0.8536, f: '85.36%'}, {v: 0.1464, f: '14.64%'}], 
+['BC42 IN-HOSPITAL DOC...', {v: 17344, f: '$17,344'}, {v: 0.0075, f: '0.75%'}, {v: 16880, f: '$16,880'}, {v: 0, f: '$0'}, {v: 70, f: '$70'}, {v: 393, f: '$393'}, {v: 0.9733, f: '97.33%'}, {v: 0.0267, f: '2.67%'}], 
+['BC47 INPATIENT SERVI...', {v: 15694, f: '$15,694'}, {v: 0.0068, f: '0.68%'}, {v: 15692, f: '$15,692'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 2, f: '$2'}, {v: 0.9999, f: '99.99%'}, {v: 0.0001, f: '0.01%'}], 
+['BC45 MATERNITY INPAT...', {v: 14607, f: '$14,607'}, {v: 0.0063, f: '0.63%'}, {v: 14414, f: '$14,414'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 193, f: '$193'}, {v: 0.9868, f: '98.68%'}, {v: 0.0132, f: '1.32%'}], 
+['BC23 SURGERY CENTER ...', {v: 14219, f: '$14,219'}, {v: 0.0061, f: '0.61%'}, {v: 13530, f: '$13,530'}, {v: 0, f: '$0'}, {v: 689, f: '$689'}, {v: 0, f: '$0'}, {v: 0.9515, f: '95.15%'}, {v: 0.0485, f: '4.85%'}], 
+['BC50 AMBULANCE', {v: 12855, f: '$12,855'}, {v: 0.0056, f: '0.56%'}, {v: 12722, f: '$12,722'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 133, f: '$133'}, {v: 0.9897, f: '98.97%'}, {v: 0.0103, f: '1.03%'}], 
+['BC13 DURABLE MEDICAL...', {v: 12666, f: '$12,666'}, {v: 0.0055, f: '0.55%'}, {v: 12087, f: '$12,087'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 579, f: '$579'}, {v: 0.9543, f: '95.43%'}, {v: 0.0457, f: '4.57%'}], 
+['BC60 ROUTINE SCREENI...', {v: 11917, f: '$11,917'}, {v: 0.0051, f: '0.51%'}, {v: 9026, f: '$9,026'}, {v: 790, f: '$790'}, {v: 0, f: '$0'}, {v: 2101, f: '$2,101'}, {v: 0.7574, f: '75.74%'}, {v: 0.2426, f: '24.26%'}], 
+['BC65 EARLY DETECTION', {v: 11247, f: '$11,247'}, {v: 0.0049, f: '0.49%'}, {v: 7030, f: '$7,030'}, {v: 960, f: '$960'}, {v: 28, f: '$28'}, {v: 3229, f: '$3,229'}, {v: 0.6250, f: '62.50%'}, {v: 0.3750, f: '37.50%'}], 
+['BC56 PATHOLOGY', {v: 11060, f: '$11,060'}, {v: 0.0048, f: '0.48%'}, {v: 10936, f: '$10,936'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 124, f: '$124'}, {v: 0.9888, f: '98.88%'}, {v: 0.0112, f: '1.12%'}], 
+['BC44 MATERNITY - DOC...', {v: 9414, f: '$9,414'}, {v: 0.0041, f: '0.41%'}, {v: 8765, f: '$8,765'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 649, f: '$649'}, {v: 0.9311, f: '93.11%'}, {v: 0.0689, f: '6.89%'}], 
+['BC7 INPATIENT XRAY/L...', {v: 9127, f: '$9,127'}, {v: 0.0039, f: '0.39%'}, {v: 8855, f: '$8,855'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 272, f: '$272'}, {v: 0.9702, f: '97.02%'}, {v: 0.0298, f: '2.98%'}], 
+['BC69 HOME HEALTHCARE...', {v: 7616, f: '$7,616'}, {v: 0.0033, f: '0.33%'}, {v: 7616, f: '$7,616'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC54 HOME HEALTH CAR...', {v: 6471, f: '$6,471'}, {v: 0.0028, f: '0.28%'}, {v: 6471, f: '$6,471'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC35 CHEMOTHERAPY', {v: 6316, f: '$6,316'}, {v: 0.0027, f: '0.27%'}, {v: 6316, f: '$6,316'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC27 OUT PATIENT ORA...', {v: 6065, f: '$6,065'}, {v: 0.0026, f: '0.26%'}, {v: 5338, f: '$5,338'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 727, f: '$727'}, {v: 0.8801, f: '88.01%'}, {v: 0.1199, f: '11.99%'}], 
+['BC30 TREATMENT/OBSER...', {v: 5915, f: '$5,915'}, {v: 0.0026, f: '0.26%'}, {v: 5915, f: '$5,915'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC66 EARLY DETECTION...', {v: 5693, f: '$5,693'}, {v: 0.0025, f: '0.25%'}, {v: 4378, f: '$4,378'}, {v: 0, f: '$0'}, {v: 28, f: '$28'}, {v: 1286, f: '$1,286'}, {v: 0.7691, f: '76.91%'}, {v: 0.2309, f: '23.09%'}], 
+['BC2 HOSPICE CARE', {v: 5598, f: '$5,598'}, {v: 0.0024, f: '0.24%'}, {v: 5598, f: '$5,598'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC62 CHILD IMMUNIZAT...', {v: 5569, f: '$5,569'}, {v: 0.0024, f: '0.24%'}, {v: 5542, f: '$5,542'}, {v: 0, f: '$0'}, {v: 27, f: '$27'}, {v: 0, f: '$0'}, {v: 0.9952, f: '99.52%'}, {v: 0.0048, f: '0.48%'}], 
+['BC9 MODALITY', {v: 4861, f: '$4,861'}, {v: 0.0021, f: '0.21%'}, {v: 3761, f: '$3,761'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1100, f: '$1,100'}, {v: 0.7737, f: '77.37%'}, {v: 0.2263, f: '22.63%'}], 
+['BC1 MEDICAL SUPPLIES', {v: 4563, f: '$4,563'}, {v: 0.0020, f: '0.20%'}, {v: 4449, f: '$4,449'}, {v: 0, f: '$0'}, {v: 108, f: '$108'}, {v: 6, f: '$6'}, {v: 0.9751, f: '97.51%'}, {v: 0.0249, f: '2.49%'}], 
+['BC63 WELL CHILD VISI...', {v: 4480, f: '$4,480'}, {v: 0.0019, f: '0.19%'}, {v: 2334, f: '$2,334'}, {v: 530, f: '$530'}, {v: 0, f: '$0'}, {v: 1616, f: '$1,616'}, {v: 0.5210, f: '52.10%'}, {v: 0.4790, f: '47.90%'}], 
+['BC46 MATERNITY - XRA...', {v: 3462, f: '$3,462'}, {v: 0.0015, f: '0.15%'}, {v: 3247, f: '$3,247'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 215, f: '$215'}, {v: 0.9380, f: '93.80%'}, {v: 0.0620, f: '6.20%'}], 
+['BC17 ASSISTANT SURGE...', {v: 3378, f: '$3,378'}, {v: 0.0015, f: '0.15%'}, {v: 3256, f: '$3,256'}, {v: 0, f: '$0'}, {v: 122, f: '$122'}, {v: 0, f: '$0'}, {v: 0.9638, f: '96.38%'}, {v: 0.0362, f: '3.62%'}], 
+['BC24 CARDIAC REHABIL...', {v: 3064, f: '$3,064'}, {v: 0.0013, f: '0.13%'}, {v: 3064, f: '$3,064'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC11 SMS AUDIT FEE', {v: 2345, f: '$2,345'}, {v: 0.0010, f: '0.10%'}, {v: 2345, f: '$2,345'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC38 CONSULTATION', {v: 1656, f: '$1,656'}, {v: 0.0007, f: '0.07%'}, {v: 1526, f: '$1,526'}, {v: 130, f: '$130'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.9215, f: '92.15%'}, {v: 0.0785, f: '7.85%'}], 
+['BC53 VENDOR DISCOUNT...', {v: 1633, f: '$1,633'}, {v: 0.0007, f: '0.07%'}, {v: 1633, f: '$1,633'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC3 SKILLED NURSING ...', {v: 1453, f: '$1,453'}, {v: 0.0006, f: '0.06%'}, {v: 1453, f: '$1,453'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC18 OFFICE TREATMEN...', {v: 1356, f: '$1,356'}, {v: 0.0006, f: '0.06%'}, {v: 1356, f: '$1,356'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC32 OCCUPATIONAL TH...', {v: 1162, f: '$1,162'}, {v: 0.0005, f: '0.05%'}, {v: 1162, f: '$1,162'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC28 PRE-ADMISSION T...', {v: 1024, f: '$1,024'}, {v: 0.0004, f: '0.04%'}, {v: 939, f: '$939'}, {v: 0, f: '$0'}, {v: 12, f: '$12'}, {v: 74, f: '$74'}, {v: 0.9165, f: '91.65%'}, {v: 0.0835, f: '8.35%'}], 
+['BC68 EMERGENCY CARE-...', {v: 1014, f: '$1,014'}, {v: 0.0004, f: '0.04%'}, {v: 931, f: '$931'}, {v: 0, f: '$0'}, {v: 83, f: '$83'}, {v: 0, f: '$0'}, {v: 0.9177, f: '91.77%'}, {v: 0.0823, f: '8.23%'}], 
+['BC41 IMMUNIZATION', {v: 469, f: '$469'}, {v: 0.0002, f: '0.02%'}, {v: 392, f: '$392'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 77, f: '$77'}, {v: 0.8358, f: '83.58%'}, {v: 0.1642, f: '16.42%'}], 
+['BC26 CLINIC VISIT', {v: 320, f: '$320'}, {v: 0.0001, f: '0.01%'}, {v: 188, f: '$188'}, {v: 40, f: '$40'}, {v: 0, f: '$0'}, {v: 92, f: '$92'}, {v: 0.5883, f: '58.83%'}, {v: 0.4117, f: '41.17%'}], 
+['BC4 ACUPUNCTURE', {v: 300, f: '$300'}, {v: 0.0001, f: '0.01%'}, {v: 240, f: '$240'}, {v: 0, f: '$0'}, {v: 60, f: '$60'}, {v: 0, f: '$0'}, {v: 0.8000, f: '80.00%'}, {v: 0.2000, f: '20.00%'}], 
+['BC39 OFFICE MEDICATI...', {v: 223, f: '$223'}, {v: 0.0001, f: '0.01%'}, {v: 213, f: '$213'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 10, f: '$10'}, {v: 0.9574, f: '95.74%'}, {v: 0.0426, f: '4.26%'}], 
+['BC49 PRESCRIPTION DR...', {v: 199, f: '$199'}, {v: 0.0001, f: '0.01%'}, {v: 179, f: '$179'}, {v: 20, f: '$20'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.8993, f: '89.93%'}, {v: 0.1007, f: '10.07%'}], 
+['BC57 HOSPITAL PATHOL...', {v: 73, f: '$73'}, {v: 0.0000, f: '0.00%'}, {v: 73, f: '$73'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC67 TMJ BENEFIT', {v: 55, f: '$55'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 10, f: '$10'}, {v: 0, f: '$0'}, {v: 45, f: '$45'}, {v: 0.0000, f: '0.00%'}, {v: 1.0000, f: '100.00%'}], 
+['BC29 HOSPITAL PHYSIC...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC34 SPEECH THERAPY', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC58 CASE MANAGEMENT', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC59 EDUCATION/TRAIN...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC61 OTHER OBGYN DIA...', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['BC8 INFUSION THERAPY', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+]);
+
+// Create a dashboard.
+//var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+
+var dashboardprev = new google.visualization.Dashboard(document.querySelector('#dashboard'));
+
+var stringFilterprev = new google.visualization.ControlWrapper({
+controlType: 'StringFilter',
+containerId: 'string_filter_div_prev',
+options: {
+filterColumnIndex: 0
+ }
+});
+
+// Create a range slider, passing some options
+var PaidRangeSliderprev = new google.visualization.ControlWrapper({
+'controlType': 'NumberRangeFilter',
+'containerId': 'filter_div_prev',
+'options': {
+'allowHtml': true,
+'filterColumnLabel': 'Plan Pd',
+'ui': { 'cssClass': 'currencyfilter' }
+ }
+});
+
+// Create a Table chart, passing some options
+var Tableprev = new google.visualization.ChartWrapper({
+'chartType': 'Table',
+'containerId': 'chart_div_prev',
+'options': {
+'width': 660,
+'height': 210,
+cssClassNames: {
+//headerCell: 'cssHeaderCell',
+tableCell: 'small-fontprev',
+  }
+ }
+});
+
+dataprev.setColumnProperty(0, 'className', 'left-text');
+dataprev.setColumnProperty(7, 'className', 'Col7-text');
+dataprev.setColumnProperty(8, 'className', 'Col8-text');
+//dataprev.setColumnProperty(2, 'className', 'Col2-text');
+//dataprev.setColumnProperty(1, 'className', 'Col1-text');
+//dataprev.setColumnProperty(3, 'className', 'Col3-text');
+//dataprev.setColumnProperty(4, 'className', 'Col4-text');
+//dataprev.setColumnProperty(5, 'className', 'Col5-text');
+//dataprev.setColumnProperty(6, 'className', 'Col6-text');
+
+// Establish dependencies, declaring that 'filter' drives 'Table',
+// so that the table will only display entries that are let through
+// given the chosen slider range.
+dashboardprev.bind([stringFilterprev, PaidRangeSliderprev], [Tableprev]);
+
+//var csv = google.visualization.dataTableToCsv(dataprev);
+//console.log(csv);
+
+// Draw the dashboard.
+dashboardprev.draw(dataprev);
+}
+
+$('.csvprev-button').on('click', function () {
+var browserIsIE;
+var csvColumns;
+var csvContent;
+var downloadLink;
+var fileName;
+
+// build column headings
+csvColumns = '';
+for (var i = 0; i < data.getNumberOfColumns(); i++) {
+csvColumns += data.getColumnLabel(i);
+if (i < (data.getNumberOfColumns() - 1)) {
+csvColumns += ',';
+ }
+}
+csvColumns += '\n';
+
+// build data rows
+csvContent = csvColumns + google.visualization.dataTableToCsv(dataprev);
+
+// download file
+browserIsIE = false || !!document.documentMode;
+fileName = 'data.csv';
+if (browserIsIE) {
+window.navigator.msSaveBlob(new Blob([csvContent], {type: 'data:text/csv'}), fileName);
+} else {
+downloadLink = document.createElement('a');
+downloadLink.href = 'data:text/csv;charset=utf-8,' + encodeURI(csvContent);
+downloadLink.download = fileName;
+raiseEvent(downloadLink, 'click');
+downloadLink = null;
+ }
+});
+
+function raiseEvent(element, eventType) {
+var eventRaised;
+if (document.createEvent) {
+eventRaised = document.createEvent('MouseEvents');
+eventRaised.initEvent(eventType, true, false);
+element.dispatchEvent(eventRaised);
+} else if (document.createEventObject) {
+eventRaised = document.createEventObject();
+element.fireEvent('on' + eventType, eventRaised);
+ }
+}
+
+</script>
+
+<script type='text/javascript'>
+function DOchkNo() {
+
+document.getElementById('chkNo').click()
+
+ }
+</script>
+<body>
+
+<div id='Header' class='Txt1' style='position: absolute; left: 10px; top: 40px; height: 87px'>
+
+<p>
+<font font size='2' face='arial' COLOR='#0000ff'>
+<u>
+<a title='View Management Reports in Excel (Full Details)' href='MgmtReports.xls'>
+Management Reports.xls</a></u>&nbsp;&nbsp;&nbsp;
+<a href='Summary.html'>
+<u>Plan Cost Summary</u></a>&nbsp;&nbsp;&nbsp;
+<u><a href='TAT.html'>Turn Around Time (TAT) Analysis</a></u>&nbsp;&nbsp;&nbsp;
+<u><a href='Lag.html'>Lag Analysis</a></u>&nbsp;&nbsp;&nbsp;
+<u><a href='PaidByMth.html'>Paid Date Analysis</a></u>&nbsp;&nbsp;&nbsp;
+<a href='SvcByMth.html'>Service Date Analysis</a></u>&nbsp;&nbsp;&nbsp;
+<u><a href='Networks.html'>Networks</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='BenCode.html'>Benefit Codes</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Claimants.html'>
+Claimants</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Providers.html'>Providers</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Procedures.html'>Procedures</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Diagnosis.html'>Diagnoses</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='ClaimSize.html'>Claim Size</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Age.html'>Age Analysis</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='OfficeVisits.html'>Office Visits</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Chronic.html'>Chronic Conditions</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='EmpDep.html'>Employees/Dependents</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Enrollment.html'>Enrollment</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Location.html'>Locations</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Groups.html'>Groups</a></u>&nbsp;&nbsp;&nbsp;
+<u>
+<a href='Plans.html'>Plans</a></u>
+
+</font><p>
+
+</div>
+
+<img src='Logo.jpg' width='125' height='75' />
+
+<h1>SAMPLE<BR><u>Benefit Codes</u></h1>
+<div id='Current'>
+Paid 4/1/2011 - 3/31/2012<br>Service 1/1/2006 - 3/31/2012
+</div>
+
+<div id='Previous'>
+Paid 4/1/2010 - 3/31/2011<br>Service 1/1/2006 - 3/31/2011
+</div>
+
+<div id='TitleCurrent'>
+Current Period
+</div>
+
+<div id='TitlePrevious'>
+Previous Period
+</div>
+
+<div id='SummaryCurrent' class='tableStyle'>
+
+<table>
+
+<caption class='DescVal'><u>Paid Summary</u></caption>
+<tr>
+<td class='DescFont'><div>Original Charge</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$6,157,239</td>
+<td class='DescVal'>100.00%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Charge</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$4,969,121</td>
+<td class='DescVal'>80.70%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Ineligible Amount</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$2,317,836</td>
+<td class='DescVal'>37.64%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Amount Due To Providers</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$2,651,285</td>
+<td class='DescVal'>43.06%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Plan Paid</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$2,520,986</td>
+<td class='DescVal'>95.09%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Member Copays</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$44,426</td>
+<td class='DescVal'>1.68%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Member Deductibles</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$72,893</td>
+<td class='DescVal'>2.75%</td>
+</tr>
+<tr>
+<td class='DescFont'><div>Member Co-Insurance</div></td>
+<td class='DescFont'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescVal'>$12,981</td>
+<td class='DescVal'>0.49%</td>
+</tr>
+<tr>
+<td class='DescFont'><div></div></td>
+<td class='DescVal'><div></div></td>
+</tr>
+<tr>
+<td class='DescFont'><div>Clamaints</div></td>
+<td class='DescFont'><div>612</div></td>
+</tr>
+<tr>
+<td class='DescFont'><div>Claim Lines</div></td>
+<td class='DescFont'><div>18,480</div></td>
+</tr>
+
+</table>
+</div>
+
+<div id='SummaryPrevious' class='tableStylePrev'>
+
+<table>
+
+<caption class='DescValPrev'><u>Paid Summary</u></caption>
+<tr>
+<td class='DescFontPrev'><div>Original Charge</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$5,657,171</td>
+<td class='DescValPrev'>100.00%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Charge</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$4,564,128</td>
+<td class='DescValPrev'>80.68%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Ineligible Amount</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$2,248,012</td>
+<td class='DescValPrev'>39.74%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Amount Due To Providers</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$2,316,116</td>
+<td class='DescValPrev'>40.94%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Plan Paid</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$2,182,661</td>
+<td class='DescValPrev'>94.24%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Member Copays</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$34,178</td>
+<td class='DescValPrev'>1.48%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Member Deductibles</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$82,803</td>
+<td class='DescValPrev'>3.58%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Member Co-Insurance</div></td>
+<td class='DescFontPrev'><div>% of Total</div></td>
+</tr>
+<tr>
+<td class='DescValPrev'>$16,474</td>
+<td class='DescValPrev'>0.71%</td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div></div></td>
+<td class='DescValPrev'><div></div></td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Clamaints</div></td>
+<td class='DescFontPrev'><div>567</div></td>
+</tr>
+<tr>
+<td class='DescFontPrev'><div>Claim Lines</div></td>
+<td class='DescFontPrev'><div>18,932</div></td>
+</tr>
+
+</table>
+</div>
+
+<script type='text/javascript'>
+
+// Load Charts and the corechart and barchart packages.
+
+google.charts.load('current', {'packages': ['table', 'map', 'corechart']});
+
+// Draw the pie chart and bar chart when Charts is loaded.
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'BenCode');
+data.addColumn('number', 'Total Paid');
+
+data.addRows([
+['BC21 INPATIENT HOSPITAL CHARGES',771052],
+['BC52 ACUTE DRUG CARD/BENEFIT',259738],
+['BC22 OUTPATIENT HOSPITAL',247340],
+['BC6 HOSPITAL BILLED XRAY/LAB',231158],
+['BC55 MAIL ORDER RX BENEFIT',109729],
+['BC14 SURGERY PHYSICIAN',94060],
+['BC37 OFFICE VISIT',89367],
+['BC15 OUTPATIENT SURGERY-PHYSICIAN',84506],
+['BC25 HOSPITAL EMERGENCY ROOM',82671],
+['BC5 XRAY/LAB',72504],
+['All Other Benefit Codes',609162]
+]);
+
+
+var dataprev = new google.visualization.DataTable();
+dataprev.addColumn('string', 'BenCode');
+dataprev.addColumn('number', 'Total Paid');
+
+dataprev.addRows([
+['BC21 INPATIENT HOSPITAL CHARGES',561481],
+['BC22 OUTPATIENT HOSPITAL',259526],
+['BC6 HOSPITAL BILLED XRAY/LAB',251166],
+['BC52 ACUTE DRUG CARD/BENEFIT',192691],
+['BC51 GANSE APOTHECARY',126871],
+['BC5 XRAY/LAB',102359],
+['BC37 OFFICE VISIT',90072],
+['BC15 OUTPATIENT SURGERY-PHYSICIAN',64305],
+['BC43 SP- OFFICE VISIT',58117],
+['BC25 HOSPITAL EMERGENCY ROOM',54409],
+['All Other Benefit Codes',555118]
+]);
+
+var piechart_options = {title:'Top Ten Benefit Codes',
+width:375,
+top:180,
+'backgroundColor': 'transparent',
+legend: {textStyle: {fontSize: 9}},
+height:340};
+var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+piechart.draw(data, piechart_options);
+
+google.visualization.events.addListener(dataprev, 'ready', myReadyHandler);
+var piechartprev_options = {title:'Top Ten Benefit Codes',
+width:375,
+top:180,
+height:340,
+'backgroundColor': 'transparent',
+legend: {textStyle: {color: 'LightSlateGray',fontSize: 9}},
+};
+
+var barchart = new google.visualization.PieChart(document.getElementById('piechartprev_div'));
+barchart.draw(dataprev, piechartprev_options);
+
+}
+
+function myReadyHandler(){
+
+const myTimeout = setTimeout(DOchkNo, 5);
+
+}
+</script>
+
+<!--Table and divs that hold the pie charts-->
+<table class='columns'>
+<tr>
+<td><div id='piechart_div' style='position:absolute;left:.5%;width: 28%;top:160px;border: 1px solid #ccc'></div></td>
+<td><div id='piechartprev_div' style='position:absolute;left:50.5%;width: 28%;top:160px;border: 1px solid #ccc'></div></td>
+</tr>
+
+<!--Div that will hold the dashboard-->
+<div id='dashboard'  style='position:absolute;left:.5%;top:510px;width: 50%; height: 200px;' >
+<!--Divs that will hold each control and chart-->
+<div id='string_filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;' title='Search Benefit Codes (Press Ctrl-F for the best search results across the entire table)' alt='Search Benefit Codes (Press Ctrl-F for the best search results across the entire table)'></div>
+<div id='filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 20px;'></div>
+<div id='chart_div' style='height: 210px;' ></div>
+</div>
+
+<!--Div that will hold the dashboard-->
+<div id='dashboardprev'  style='position:absolute;left:50.5%;top:510px;width: 50%; height: 200px;' >
+<!--Divs that will hold each control and chart-->
+<div id='string_filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;color: LightSlateGray;' title='Search Benefit Codes (Press Ctrl-F for the best search results across the entire table)' alt='Search Benefit Codes (Press Ctrl-F for the best search results across the entire table)'></div>
+<div id='filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 20px;color: LightSlateGray;'></div>
+<div id='chart_div_prev'></div>
+</div>
+
+<p style='position: absolute; left: 25px; top: 800px'> <font size='1.5' face='arial' color='black'>Copyright &copy; 2024, Econographics of Knoxville, Inc.</font></p>
+
+<script type='text/javascript'>
+
+function ButtonCheck() {
+
+var div = document.getElementById('chart_div');
+var chkYes = document.getElementById('chkYes');
+var chkNo = document.getElementById('chkNo');
+
+if (((div.clientHeight == 210) && (chkYes.checked))) {
+
+ }
+
+else if (((div.clientHeight == 325) && (chkNo.checked))) {
+
+ }
+
+else {
+
+ShowHideDiv()
+
+ }
+
+}
+
+</script>
+
+<script type='text/javascript'>
+    function ShowHideDiv() {
+
+        // Hide Previous Period Pie Chart
+        var chkYes = document.getElementById('chkYes');
+        var dvPassport = document.getElementById('piechartprev_div');
+        dvPassport.style.display = chkYes.checked ? 'block' : 'none';
+
+        // Hide Previous Period Table
+        var chkYes = document.getElementById('chkYes');
+        var dvPassport = document.getElementById('dashboardprev');
+        dvPassport.style.display = chkYes.checked ? 'block' : 'none';
+
+        // Hide Previous Period Previous Dates
+        var chkYes = document.getElementById('chkYes');
+        var dvPassport = document.getElementById('Previous');
+        dvPassport.style.display = chkYes.checked ? 'block' : 'none';
+
+        // Hide Previous Period Previous Title
+        var chkYes = document.getElementById('chkYes');
+        var dvPassport = document.getElementById('TitlePrevious');
+        dvPassport.style.display = chkYes.checked ? 'block' : 'none';
+
+        // Hide Previous Period Summary
+        var chkYes = document.getElementById('chkYes');
+        var dvPassport = document.getElementById('SummaryPrevious');
+        dvPassport.style.display = chkYes.checked ? 'block' : 'none';
+
+        // Hide Previous Period Summary
+        var chkYes = document.getElementById('chkYes');
+        var dvPassport = document.getElementById('csvprevious');
+        dvPassport.style.display = chkYes.checked ? 'block' : 'none';
+
+        var div = document.getElementById('dashboard');
+        dvPassport.style.display = chkYes.checked ? div.style.top = div.offsetTop + 350 + 'px' :  div.style.top = div.offsetTop - 350 + 'px';
+        dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - 670 + 'px' :  div.style.left = div.offsetLeft + 670 + 'px';
+
+        var div = document.getElementById('csvcurrent');
+        dvPassport.style.display = chkYes.checked ? div.style.top = div.offsetTop + 235 + 'px' :  div.style.top = div.offsetTop - 235 + 'px';
+        dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - 670 + 'px' :  div.style.left = div.offsetLeft + 670 + 'px';
+
+        dvPassport.style.display = chkYes.checked ? document.getElementById('chart_div').style.height = '210px' :  document.getElementById('chart_div').style.height = '325px';
+
+   }
+
+</script>
+
+<div id='ChoosePeriod' class='container'>
+
+<label for='chkYes'>
+    <input type='radio' id='chkYes' name='chkPassPort' checked='checked' onclick='ButtonCheck()' />
+    Current vs Previous<br>
+</label>
+<label for='chkNo'>
+    <input type='radio' id='chkNo' name='chkPassPort' onclick='ButtonCheck()' />
+    Current Only
+</label>
+</div>
+</body>
+</html>

@@ -344,19 +344,13 @@ google.charts.setOnLoadCallback(drawDashboard);
 function drawDashboard() {
 
 data = google.visualization.arrayToDataTable([
-['Year.Mth Paid', 'Total Pd', '% Tot', 'Plan Pd', 'CoPays', 'CoIns', 'Deduct', 'Plan%', 'Mem%'],
-['2012.03', {v: 362063, f: '$362,063'}, {v: 0.1366, f: '13.66%'}, {v: 340042, f: '$340,042'}, {v: 4355, f: '$4,355'}, {v: 559, f: '$559'}, {v: 17107, f: '$17,107'}, {v: 0.9392, f: '93.92%'}, {v: 0.0608, f: '6.08%'}], 
-['2012.02', {v: 296082, f: '$296,082'}, {v: 0.1117, f: '11.17%'}, {v: 275044, f: '$275,044'}, {v: 4402, f: '$4,402'}, {v: 1802, f: '$1,802'}, {v: 14834, f: '$14,834'}, {v: 0.9289, f: '92.89%'}, {v: 0.0711, f: '7.11%'}], 
-['2012.01', {v: 292819, f: '$292,819'}, {v: 0.1104, f: '11.04%'}, {v: 277726, f: '$277,726'}, {v: 4431, f: '$4,431'}, {v: 1936, f: '$1,936'}, {v: 8727, f: '$8,727'}, {v: 0.9485, f: '94.85%'}, {v: 0.0515, f: '5.15%'}], 
-['2011.12', {v: 221708, f: '$221,708'}, {v: 0.0836, f: '8.36%'}, {v: 214504, f: '$214,504'}, {v: 3473, f: '$3,473'}, {v: 1680, f: '$1,680'}, {v: 2050, f: '$2,050'}, {v: 0.9675, f: '96.75%'}, {v: 0.0325, f: '3.25%'}], 
-['2011.11', {v: 123307, f: '$123,307'}, {v: 0.0465, f: '4.65%'}, {v: 118255, f: '$118,255'}, {v: 2650, f: '$2,650'}, {v: 602, f: '$602'}, {v: 1800, f: '$1,800'}, {v: 0.9590, f: '95.90%'}, {v: 0.0410, f: '4.10%'}], 
-['2011.10', {v: 284928, f: '$284,928'}, {v: 0.1075, f: '10.75%'}, {v: 278642, f: '$278,642'}, {v: 3602, f: '$3,602'}, {v: 393, f: '$393'}, {v: 2291, f: '$2,291'}, {v: 0.9779, f: '97.79%'}, {v: 0.0221, f: '2.21%'}], 
-['2011.09', {v: 182408, f: '$182,408'}, {v: 0.0688, f: '6.88%'}, {v: 175752, f: '$175,752'}, {v: 3718, f: '$3,718'}, {v: 415, f: '$415'}, {v: 2523, f: '$2,523'}, {v: 0.9635, f: '96.35%'}, {v: 0.0365, f: '3.65%'}], 
-['2011.08', {v: 170349, f: '$170,349'}, {v: 0.0643, f: '6.43%'}, {v: 163938, f: '$163,938'}, {v: 3370, f: '$3,370'}, {v: 765, f: '$765'}, {v: 2277, f: '$2,277'}, {v: 0.9624, f: '96.24%'}, {v: 0.0376, f: '3.76%'}], 
-['2011.07', {v: 214971, f: '$214,971'}, {v: 0.0811, f: '8.11%'}, {v: 205550, f: '$205,550'}, {v: 3969, f: '$3,969'}, {v: 2052, f: '$2,052'}, {v: 3400, f: '$3,400'}, {v: 0.9562, f: '95.62%'}, {v: 0.0438, f: '4.38%'}], 
-['2011.06', {v: 217738, f: '$217,738'}, {v: 0.0821, f: '8.21%'}, {v: 208084, f: '$208,084'}, {v: 3527, f: '$3,527'}, {v: 892, f: '$892'}, {v: 5235, f: '$5,235'}, {v: 0.9557, f: '95.57%'}, {v: 0.0443, f: '4.43%'}], 
-['2011.05', {v: 149315, f: '$149,315'}, {v: 0.0563, f: '5.63%'}, {v: 137649, f: '$137,649'}, {v: 4327, f: '$4,327'}, {v: 1020, f: '$1,020'}, {v: 6320, f: '$6,320'}, {v: 0.9219, f: '92.19%'}, {v: 0.0781, f: '7.81%'}], 
-['2011.04', {v: 135598, f: '$135,598'}, {v: 0.0511, f: '5.11%'}, {v: 125800, f: '$125,800'}, {v: 2601, f: '$2,601'}, {v: 867, f: '$867'}, {v: 6329, f: '$6,329'}, {v: 0.9277, f: '92.77%'}, {v: 0.0723, f: '7.23%'}], 
+['Plan', 'Total Pd', '% Tot', 'Plan Pd', 'CoPays', 'CoIns', 'Deduct', 'Plan%', 'Mem%'],
+['Plan 1', {v: 2282174, f: '$2,282,174'}, {v: 0.8608, f: '86.08%'}, {v: 2151874, f: '$2,151,874'}, {v: 44426, f: '$44,426'}, {v: 12981, f: '$12,981'}, {v: 72893, f: '$72,893'}, {v: 0.9429, f: '94.29%'}, {v: 0.0571, f: '5.71%'}], 
+['Plan 3', {v: 259738, f: '$259,738'}, {v: 0.0980, f: '9.80%'}, {v: 259738, f: '$259,738'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 4', {v: 109729, f: '$109,729'}, {v: 0.0414, f: '4.14%'}, {v: 109729, f: '$109,729'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 6', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 2', {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0, f: '$'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0.0000, f: '0.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 5', {v: -355, f: '-$355'}, {v: -0.0001, f: '-0.01%'}, {v: -355, f: '-$355'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
 ]);
 
 // Create a dashboard.
@@ -482,19 +476,13 @@ google.charts.setOnLoadCallback(drawDashboardPrev);
 function drawDashboardPrev() {
 
 dataprev = google.visualization.arrayToDataTable([
-['Year.Mth Paid', 'Total Pd', '% Tot', 'Plan Pd', 'CoPays', 'CoIns', 'Deduct', 'Plan%', 'Mem%'],
-['2011.03', {v: 231134, f: '$231,134'}, {v: 0.0998, f: '9.98%'}, {v: 213111, f: '$213,111'}, {v: 3975, f: '$3,975'}, {v: 1358, f: '$1,358'}, {v: 12690, f: '$12,690'}, {v: 0.9220, f: '92.20%'}, {v: 0.0780, f: '7.80%'}], 
-['2011.02', {v: 222493, f: '$222,493'}, {v: 0.0961, f: '9.61%'}, {v: 198679, f: '$198,679'}, {v: 3233, f: '$3,233'}, {v: 1024, f: '$1,024'}, {v: 19557, f: '$19,557'}, {v: 0.8930, f: '89.30%'}, {v: 0.1070, f: '10.70%'}], 
-['2011.01', {v: 236743, f: '$236,743'}, {v: 0.1022, f: '10.22%'}, {v: 223527, f: '$223,527'}, {v: 3517, f: '$3,517'}, {v: 1332, f: '$1,332'}, {v: 8368, f: '$8,368'}, {v: 0.9442, f: '94.42%'}, {v: 0.0558, f: '5.58%'}], 
-['2010.12', {v: 127837, f: '$127,837'}, {v: 0.0552, f: '5.52%'}, {v: 121444, f: '$121,444'}, {v: 2688, f: '$2,688'}, {v: 1541, f: '$1,541'}, {v: 2165, f: '$2,165'}, {v: 0.9500, f: '95.00%'}, {v: 0.0500, f: '5.00%'}], 
-['2010.11', {v: 257310, f: '$257,310'}, {v: 0.1111, f: '11.11%'}, {v: 250061, f: '$250,061'}, {v: 2926, f: '$2,926'}, {v: 2706, f: '$2,706'}, {v: 1617, f: '$1,617'}, {v: 0.9718, f: '97.18%'}, {v: 0.0282, f: '2.82%'}], 
-['2010.10', {v: 174393, f: '$174,393'}, {v: 0.0753, f: '7.53%'}, {v: 170129, f: '$170,129'}, {v: 2028, f: '$2,028'}, {v: 1061, f: '$1,061'}, {v: 1176, f: '$1,176'}, {v: 0.9755, f: '97.55%'}, {v: 0.0245, f: '2.45%'}], 
-['2010.09', {v: 183431, f: '$183,431'}, {v: 0.0792, f: '7.92%'}, {v: 178902, f: '$178,902'}, {v: 2204, f: '$2,204'}, {v: 532, f: '$532'}, {v: 1792, f: '$1,792'}, {v: 0.9753, f: '97.53%'}, {v: 0.0247, f: '2.47%'}], 
-['2010.08', {v: 186581, f: '$186,581'}, {v: 0.0806, f: '8.06%'}, {v: 178238, f: '$178,238'}, {v: 2450, f: '$2,450'}, {v: 2612, f: '$2,612'}, {v: 3281, f: '$3,281'}, {v: 0.9553, f: '95.53%'}, {v: 0.0447, f: '4.47%'}], 
-['2010.07', {v: 204677, f: '$204,677'}, {v: 0.0884, f: '8.84%'}, {v: 198110, f: '$198,110'}, {v: 2477, f: '$2,477'}, {v: 1327, f: '$1,327'}, {v: 2762, f: '$2,762'}, {v: 0.9679, f: '96.79%'}, {v: 0.0321, f: '3.21%'}], 
-['2010.06', {v: 208905, f: '$208,905'}, {v: 0.0902, f: '9.02%'}, {v: 198453, f: '$198,453'}, {v: 2591, f: '$2,591'}, {v: 1619, f: '$1,619'}, {v: 6243, f: '$6,243'}, {v: 0.9500, f: '95.00%'}, {v: 0.0500, f: '5.00%'}], 
-['2010.05', {v: 177520, f: '$177,520'}, {v: 0.0766, f: '7.66%'}, {v: 162083, f: '$162,083'}, {v: 3729, f: '$3,729'}, {v: 1064, f: '$1,064'}, {v: 10644, f: '$10,644'}, {v: 0.9130, f: '91.30%'}, {v: 0.0870, f: '8.70%'}], 
-['2010.04', {v: 105091, f: '$105,091'}, {v: 0.0454, f: '4.54%'}, {v: 89925, f: '$89,925'}, {v: 2360, f: '$2,360'}, {v: 299, f: '$299'}, {v: 12508, f: '$12,508'}, {v: 0.8557, f: '85.57%'}, {v: 0.1443, f: '14.43%'}], 
+['Plan', 'Total Pd', '% Tot', 'Plan Pd', 'CoPays', 'CoIns', 'Deduct', 'Plan%', 'Mem%'],
+['Plan 1', {v: 1970004, f: '$1,970,004'}, {v: 0.8506, f: '85.06%'}, {v: 1836549, f: '$1,836,549'}, {v: 34178, f: '$34,178'}, {v: 16474, f: '$16,474'}, {v: 82803, f: '$82,803'}, {v: 0.9323, f: '93.23%'}, {v: 0.0677, f: '6.77%'}], 
+['Plan 2', {v: 149495, f: '$149,495'}, {v: 0.0645, f: '6.45%'}, {v: 149495, f: '$149,495'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 6', {v: 127031, f: '$127,031'}, {v: 0.0548, f: '5.48%'}, {v: 127031, f: '$127,031'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 3', {v: 43196, f: '$43,196'}, {v: 0.0187, f: '1.87%'}, {v: 43196, f: '$43,196'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 4', {v: 26550, f: '$26,550'}, {v: 0.0115, f: '1.15%'}, {v: 26550, f: '$26,550'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
+['Plan 5', {v: -160, f: '-$160'}, {v: -0.0001, f: '-0.01%'}, {v: -160, f: '-$160'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 0, f: '$0'}, {v: 1.0000, f: '100.00%'}, {v: 0.0000, f: '0.00%'}], 
 ]);
 
 // Create a dashboard.
@@ -665,7 +653,7 @@ Claimants</a></u>&nbsp;&nbsp;&nbsp;
 
 <img src='Logo.jpg' width='125' height='75' />
 
-<h1>SAMPLE<BR><u>Paid Claims Summary</u></h1>
+<h1>SAMPLE<BR><u>Plans</u></h1>
 <div id='Current'>
 Paid 4/1/2011 - 3/31/2012<br>Service 1/1/2006 - 3/31/2012
 </div>
@@ -864,45 +852,50 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 
 var data = new google.visualization.DataTable();
-data.addColumn('string', 'Year.Mth Paid');
+data.addColumn('string', 'Plan');
 data.addColumn('number', 'Total Paid');
 
 data.addRows([
-['Plan Paid', 2520986],
-['Member Copays', 44426],
-['Member Deductibles', 72893],
-['Member Co-Insurance', 12981],
+['Plan 1',2282174],
+['Plan 3',259738],
+['Plan 4',109729],
+['Plan 6',0],
+['Plan 2',0],
+['Plan 5',-355],
+['All Other Status',0]
 ]);
 
 
+var dataprev = new google.visualization.DataTable();
+dataprev.addColumn('string', 'Location');
+dataprev.addColumn('number', 'Total Paid');
 
-dataprev = google.visualization.arrayToDataTable([
-['Year.Mth Paid', 'Total Paid', { role: 'style' }],
-['Plan Paid', 2182661,'color: gray'],
-['Member Copays', 34178,'color: gray'],
-['Member Deductibles', 82803,'color: gray'],
-['Member Co-Insurance', 16474,'color: gray'],
+dataprev.addRows([
+['Plan 1',1970004],
+['Plan 2',149495],
+['Plan 6',127031],
+['Plan 3',43196],
+['Plan 4',26550],
+['Plan 5',-160],
+['All Other Status',0]
 ]);
 
-var piechart_options = {title:'Paid Claims Summary',
+var piechart_options = {title:'Plan',
 width:375,
 top:180,
 'backgroundColor': 'transparent',
-legend: {position: 'none'},
-hAxis: { format: '#,###', viewWindow: { min: 0, max: 362063 }},
 height:340};
 var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
 piechart.draw(data, piechart_options);
 
 google.visualization.events.addListener(dataprev, 'ready', myReadyHandler);
 
-var piechartprev_options = {title:'Paid Claims Summary',
+var piechartprev_options = {title:'Plan',
 width:375,
 top:180,
 height:340,
-hAxis: { format: '#,###', viewWindow: { min: 0, max: 362063 }},
 'backgroundColor': 'transparent',
-legend: {position: 'none'}
+legend: {textStyle: {color: 'LightSlateGray'}},
 };
 
 var barchart = new google.visualization.PieChart(document.getElementById('piechartprev_div'));
@@ -915,6 +908,7 @@ function myReadyHandler(){
 const myTimeout = setTimeout(DOchkNo, 5);
 
 }
+
 </script>
 
 <!--Table and divs that hold the pie charts-->
@@ -927,7 +921,7 @@ const myTimeout = setTimeout(DOchkNo, 5);
 <!--Div that will hold the dashboard-->
 <div id='dashboard'  style='position:absolute;left:.5%;top:510px;width: 50%; height: 200px;' >
 <!--Divs that will hold each control and chart-->
-<div id='string_filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;' title='Search Year.Month Paid (Press Ctrl-F for the best search results across the entire table)' alt='Search Year.Month Paid (Press Ctrl-F for the best search results across the entire table)'></div>
+<div id='string_filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;' title='Search Plan (Press Ctrl-F for the best search results across the entire table)' alt='Search Plan (Press Ctrl-F for the best search results across the entire table)'></div>
 <div id='filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 20px;'></div>
 <div id='chart_div' style='height: 210px;'></div>
 </div>
@@ -935,13 +929,12 @@ const myTimeout = setTimeout(DOchkNo, 5);
 <!--Div that will hold the dashboard-->
 <div id='dashboardprev'  style='position:absolute;left:50.5%;top:510px;width: 50%; height: 200px;' >
 <!--Divs that will hold each control and chart-->
-<div id='string_filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;color: LightSlateGray;' title='Search Year.Month Paid (Press Ctrl-F for the best search results across the entire table)' alt='Search Year.Month Paid (Press Ctrl-F for the best search results across the entire table)'></div>
+<div id='string_filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;color: LightSlateGray;' title='Search Plan (Press Ctrl-F for the best search results across the entire table)' alt='Search Plan (Press Ctrl-F for the best search results across the entire table)'></div>
 <div id='filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 20px;color: LightSlateGray;'></div>
 <div id='chart_div_prev'></div>
 </div>
 
 <p style='position: absolute; left: 25px; top: 800px'> <font size='1.5' face='arial' color='black'>Copyright &copy; 2024, Econographics of Knoxville, Inc.</font></p>
-
 
 <script type='text/javascript'>
 

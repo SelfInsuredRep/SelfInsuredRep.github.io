@@ -322,7 +322,7 @@ overflow: hidden; white-space: nowrap;
 <script type='text/javascript' src='https://www.google.com/jsapi?fake=.js'></script>
 
 <div>
-<button id='csvcurrent' class='csv-button'>Download CSV</button>
+<button id='csvcurrent'  class='csv-button'>Download CSV</button>
 </div>
 
 <div>
@@ -613,7 +613,6 @@ document.getElementById('chkNo').click()
  }
 </script>
 <body>
-</script>
 
 <div id='Header' class='Txt1' style='position: absolute; left: 10px; top: 40px; height: 87px'>
 
@@ -665,7 +664,7 @@ Claimants</a></u>&nbsp;&nbsp;&nbsp;
 
 <img src='Logo.jpg' width='125' height='75' />
 
-<h1>SAMPLE<BR><u>Paid Claims Summary</u></h1>
+<h1>SAMPLE<BR><u>Paid Date Analysis</u></h1>
 <div id='Current'>
 Paid 4/1/2011 - 3/31/2012<br>Service 1/1/2006 - 3/31/2012
 </div>
@@ -868,36 +867,54 @@ data.addColumn('string', 'Year.Mth Paid');
 data.addColumn('number', 'Total Paid');
 
 data.addRows([
-['Plan Paid', 2520986],
-['Member Copays', 44426],
-['Member Deductibles', 72893],
-['Member Co-Insurance', 12981],
+[' 2012.03',362063],
+[' 2012.02',296082],
+[' 2012.01',292819],
+[' 2011.12',221708],
+[' 2011.11',123307],
+[' 2011.10',284928],
+[' 2011.09',182408],
+[' 2011.08',170349],
+[' 2011.07',214971],
+[' 2011.06',217738],
+[' 2011.05',149315],
+[' 2011.04',135598],
 ]);
 
 
 
 dataprev = google.visualization.arrayToDataTable([
 ['Year.Mth Paid', 'Total Paid', { role: 'style' }],
-['Plan Paid', 2182661,'color: gray'],
-['Member Copays', 34178,'color: gray'],
-['Member Deductibles', 82803,'color: gray'],
-['Member Co-Insurance', 16474,'color: gray'],
+[' 2011.03',231134,'color: gray'],
+[' 2011.02',222493,'color: gray'],
+[' 2011.01',236743,'color: gray'],
+[' 2010.12',127837,'color: gray'],
+[' 2010.11',257310,'color: gray'],
+[' 2010.10',174393,'color: gray'],
+[' 2010.09',183431,'color: gray'],
+[' 2010.08',186581,'color: gray'],
+[' 2010.07',204677,'color: gray'],
+[' 2010.06',208905,'color: gray'],
+[' 2010.05',177520,'color: gray'],
+[' 2010.04',105091,'color: gray'],
 ]);
 
-var piechart_options = {title:'Paid Claims Summary',
+var piechart_options = {title:'Paid Claims By Month',
 width:375,
+animation: {duration: 1000, easing: 'linear', startup: true},
 top:180,
 'backgroundColor': 'transparent',
 legend: {position: 'none'},
 hAxis: { format: '#,###', viewWindow: { min: 0, max: 362063 }},
 height:340};
-var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+var piechart = new google.visualization.BarChart(document.getElementById('piechart_div'));
 piechart.draw(data, piechart_options);
 
 google.visualization.events.addListener(dataprev, 'ready', myReadyHandler);
 
-var piechartprev_options = {title:'Paid Claims Summary',
+var piechartprev_options = {title:'Paid Claims By Month',
 width:375,
+animation: {duration: 1000, easing: 'linear', startup: true},
 top:180,
 height:340,
 hAxis: { format: '#,###', viewWindow: { min: 0, max: 362063 }},
@@ -905,7 +922,7 @@ hAxis: { format: '#,###', viewWindow: { min: 0, max: 362063 }},
 legend: {position: 'none'}
 };
 
-var barchart = new google.visualization.PieChart(document.getElementById('piechartprev_div'));
+var barchart = new google.visualization.BarChart(document.getElementById('piechartprev_div'));
 barchart.draw(dataprev, piechartprev_options);
 
 }
