@@ -22,7 +22,7 @@ font-size: 15px;
 #Current {
 position: absolute;
 //border: 1px solid red;
-top: 120px;
+top: 70px;
 left: 12%;
 width: 300px;
 height: 30px;
@@ -35,7 +35,7 @@ font-weight: bold;
 #Previous {
 position: absolute;
 //border: 1px solid red;
-top: 120px;
+top: 70px;
 left: 66%;
 width: 300px;
 height: 30px;
@@ -49,7 +49,7 @@ color: LightSlateGray;
 #TitleCurrent {
 position: absolute;
 //border: 1px solid red;
-top: 100px;
+top: 50px;
 left: 12%;
 width: 300px;
 height: 20px;
@@ -63,7 +63,7 @@ text-decoration: underline;
 #TitlePrevious {
 position: absolute;
 //border: 1px solid red;
-top: 100px;
+top: 50px;
 left: 66%;
 width: 300px;
 height: 20px;
@@ -88,7 +88,7 @@ img
 {
 position:absolute;
 left: 93%;
-top:80px;
+top:30px;
 }
 
 .cssHeaderRow {
@@ -220,7 +220,7 @@ height: 14px;
 
 .csv-button {
 position: absolute;
-top: 770px;
+top: 720px;
 left: 42%;
 height: 20px;
 text-align: center;
@@ -231,7 +231,7 @@ font-weight: normal;
 
 .csvprev-button {
 position: absolute;
-top: 770px;
+top: 720px;
 left: 92%;
 height: 20px;
 text-align: center;
@@ -246,7 +246,7 @@ height: 750px;
 position: absolute;
 left: 50%;
 margin-left: -3px;
-top: 100px;
+top: 50px;
 }
 
 .DescFont {
@@ -281,7 +281,7 @@ column-width: 100px;
 
 .tableStyle {
 position: absolute;
-top: 160px;
+top: 110px;
 left: 32%;
 width: 200px;
 height: 340px;
@@ -291,7 +291,7 @@ overflow: hidden; white-space: nowrap;
 
 .tableStylePrev {
 position: absolute;
-top: 160px;
+top: 110px;
 left: 82%;
 width: 200px;
 height: 340px;
@@ -307,10 +307,19 @@ overflow: hidden; white-space: nowrap;
   //font-weight: Bold;
   color: Black;
   position: absolute;
-  top: 105px;
+  top: 55px;
   left: 55.5%;
   //width: 50%;
   //height: 200px;
+}
+
+/* The Header */
+.headertext {
+ position: absolute;
+  top: 0px;
+  left: 30%;
+  width: 40%;
+  height: 200px;
 }
 
 </style>
@@ -388,7 +397,7 @@ var Table = new google.visualization.ChartWrapper({
 'containerId': 'chart_div',
 'options': {
 'width': 660,
-'height': 325,
+'height': 210,
 cssClassNames: {
 //headerCell: 'cssHeaderCell',
 tableCell: 'small-font',
@@ -613,57 +622,12 @@ document.getElementById('chkNo').click()
 <body>
 </script>
 
-<div id='Header' class='Txt1' style='position: absolute; left: 10px; top: 40px; height: 87px'>
-
-<p>
-<font font size='2' face='arial' COLOR='#0000ff'>
-<u>
-<a title='View Management Reports in Excel (Full Details)' href='MgmtReports.xls'>
-Management Reports.xls</a></u>&nbsp;&nbsp;&nbsp;
-<a href='Summary.html'>
-<u>Plan Cost Summary</u></a>&nbsp;&nbsp;&nbsp;
-<u><a href='TAT.html'>Turn Around Time (TAT) Analysis</a></u>&nbsp;&nbsp;&nbsp;
-<u><a href='Lag.html'>Lag Analysis</a></u>&nbsp;&nbsp;&nbsp;
-<u><a href='PaidByMth.html'>Paid Date Analysis</a></u>&nbsp;&nbsp;&nbsp;
-<a href='SvcByMth.html'>Service Date Analysis</a></u>&nbsp;&nbsp;&nbsp;
-<u><a href='Networks.html'>Networks</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='BenCode.html'>Benefit Codes</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Claimants.html'>
-Claimants</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Providers.html'>Providers</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Procedures.html'>Procedures</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Diagnosis.html'>Diagnoses</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='ClaimSize.html'>Claim Size</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Age.html'>Age Analysis</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='OfficeVisits.html'>Office Visits</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Chronic.html'>Chronic Conditions</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='EmpDep.html'>Employees/Dependents</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Enrollment.html'>Enrollment</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Location.html'>Locations</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Groups.html'>Groups</a></u>&nbsp;&nbsp;&nbsp;
-<u>
-<a href='Plans.html'>Plans</a></u>
-
-</font><p>
-
-</div>
 
 <img src='Logo.jpg' width='125' height='75' />
 
+<div class='headertext'>
 <h1>SAMPLE<BR><u>Networks</u></h1>
+</div>
 <div id='Current'>
 Paid 4/1/2011 - 3/31/2012<br>Service 1/1/2006 - 3/31/2012
 </div>
@@ -933,12 +897,12 @@ barchart.draw(dataprev, piechartprev_options);
 <!--Table and divs that hold the pie charts-->
 <table class='columns'>
 <tr>
-<td><div id='piechart_div' style='position:absolute;left:.5%;width: 28%;top:160px;border: 1px solid #ccc'></div></td>
-<td><div id='piechartprev_div' style='position:absolute;left:50.5%;width: 28%;top:160px;border: 1px solid #ccc'></div></td>
+<td><div id='piechart_div' style='position:absolute;left:.5%;width: 28%;top:110px;border: 1px solid #ccc'></div></td>
+<td><div id='piechartprev_div' style='position:absolute;left:50.5%;width: 28%;top:110px;border: 1px solid #ccc'></div></td>
 </tr>
 
 <!--Div that will hold the dashboard-->
-<div id='dashboard'  style='position:absolute;left:.5%;top:510px;width: 50%; height: 200px;' >
+<div id='dashboard'  style='position:absolute;left:0%;top:460px;width: 48%; height: 200px;' >
 <!--Divs that will hold each control and chart-->
 <div id='string_filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;' title='Search Networks (Press Ctrl-F for the best search results across the entire table)' alt='Search Networks (Press Ctrl-F for the best search results across the entire table)'></div>
 <div id='filter_div' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 20px;'></div>
@@ -946,14 +910,23 @@ barchart.draw(dataprev, piechartprev_options);
 </div>
 
 <!--Div that will hold the dashboard-->
-<div id='dashboardprev'  style='position:absolute;left:50.5%;top:510px;width: 50%; height: 200px;' >
+<div id='dashboardprev'  style='position:absolute;left:50.5%;top:460px;width: 48%; height: 200px;' >
 <!--Divs that will hold each control and chart-->
 <div id='string_filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 25px;color: LightSlateGray;' title='Search Networks (Press Ctrl-F for the best search results across the entire table)' alt='Search Networks (Press Ctrl-F for the best search results across the entire table)'></div>
 <div id='filter_div_prev' style='font-size: 12px;font-family: Arial, Helvetica, sans-serif;height: 20px;color: LightSlateGray;'></div>
 <div id='chart_div_prev'></div>
 </div>
 
-<p style='position: absolute; left: 25px; top: 800px'> <font size='1.5' face='arial' color='black'>Copyright &copy; 2024, Econographics of Knoxville, Inc.</font></p>
+<p style='position: absolute; left: 25px; top: 750px'> <font size='1.5' face='arial' color='black'>Copyright &copy; 2024, Econographics of Knoxville, Inc.</font></p>
+<p style='position: absolute; left: 25px; top: 40px'> <font size='1.5' face='arial' color='blue'>Econographics of Knoxville, Inc.</font></p>
+<p style='position: absolute; left: 25px; top: 50px'> <font size='1.5' face='arial' color='blue'>Maryville, TN</font></p>
+<p style='position: absolute; left: 25px; top: 60px'> <font size='1.5' face='arial' color='blue'>Phone/Text: (865) 675-6660</font></p>
+<ul>
+<li style='position: absolute; left: 450px; top: 45px'> <font size='1.5' face='arial' color='blue'>As low as $65 group per month</font></li>
+<li style='position: absolute; left: 450px; top: 55px'> <font size='1.5' face='arial' color='blue'>Server,Local/Network Dr,or Sharepoint</font></li>
+<li style='position: absolute; left: 450px; top: 65px'> <font size='1.5' face='arial' color='blue'>Scalable - No Required Data Xfer</font></li>
+<li style='position: absolute; left: 450px; top: 75px'> <font size='1.5' face='arial' color='blue'>Html or Aspx w/ No Setup Fees</font></li>
+</ul>
 
 <script type='text/javascript'>
 
@@ -1014,13 +987,17 @@ ShowHideDiv()
         var dvPassport = document.getElementById('csvprevious');
         dvPassport.style.display = chkYes.checked ? 'block' : 'none';
 
+        let LeftCurr = (screen.width * .99) - (screen.width * .49)  ;
+
         var div = document.getElementById('dashboard');
         dvPassport.style.display = chkYes.checked ? div.style.top = div.offsetTop + 350 + 'px' :  div.style.top = div.offsetTop - 350 + 'px';
-        dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - 670 + 'px' :  div.style.left = div.offsetLeft + 670 + 'px';
+        //dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - 680 + 'px' :  div.style.left = div.offsetLeft + 680 + 'px';
+        dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - LeftCurr + 'px' :  div.style.left = div.offsetLeft + LeftCurr + 'px';
 
         var div = document.getElementById('csvcurrent');
-        dvPassport.style.display = chkYes.checked ? div.style.top = div.offsetTop + 235 + 'px' :  div.style.top = div.offsetTop - 235 + 'px';
-        dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - 670 + 'px' :  div.style.left = div.offsetLeft + 670 + 'px';
+        dvPassport.style.display = chkYes.checked ? div.style.top = div.offsetTop + 350 + 'px' :  div.style.top = div.offsetTop - 350 + 'px';
+        //dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - 670 + 'px' :  div.style.left = div.offsetLeft + 670 + 'px';
+        dvPassport.style.display = chkYes.checked ? div.style.left = div.offsetLeft - LeftCurr - 10 + 'px' :  div.style.left = div.offsetLeft + LeftCurr - 4 + 'px';
 
         dvPassport.style.display = chkYes.checked ? document.getElementById('chart_div').style.height = '210px' :  document.getElementById('chart_div').style.height = '325px';
 
